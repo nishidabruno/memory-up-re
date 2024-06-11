@@ -1,0 +1,17 @@
+[package]
+name = "domain"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+dotenvy = { workspace = true }
+async-trait = { workspace = true}
+uuid = { workspace = true }
+anyhow = { workspace = true }
+rand = { workspace = true }
+utils = { path = "../utils" }
+sqlx = { version = "0.7", features = [ "runtime-tokio", "sqlite", "migrate", "uuid" ] }
